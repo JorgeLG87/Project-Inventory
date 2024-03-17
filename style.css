@@ -1,0 +1,41 @@
+.top {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    background-color: cadetblue;
+    position: relative;
+    opacity: 0.81;
+}
+
+.top__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: "Average";
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+h3 {
+    text-align: center;
+    font-family: "Average";
+}
+
+hr {
+    width:75%;
+}
+
+.main__list__item {
+    width: 100%;
+    display: fle
+}
+
