@@ -20,22 +20,65 @@
     <div class="main">
         <div class="main__list">
             <h3>List</h3>
-            <hr>
+            <hr class="title-underline">
             <div class="main__list__item">
-                
+                <div class="main__list__sub-item">
+                    <div class="image-container">
+                        <img class="image-container__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png">
+                    </div>
+                    <div class="info-container">
+                        <h2 class="sublist-title">Boca Juniors</h2>
+                        <hr class="sublist-underline">
+                    </div>
+                </div>
             </div>
+
+            <div class="main__list__item">
+                <div class="main__list__sub-item">
+                    <div class="image-container">
+                        <img class="image-container__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png">
+                    </div>
+                    <div class="info-container">
+                        <h2 class="sublist-title">Boca Juniors</h2>
+                        <hr class="sublist-underline">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
         <div class="main__add-item">
             <h3>Add Item</h3>
-            <hr>
+            <hr class="title-underline">
             <form>
-                <label>
+                <label class="name">
                     Name
                     <input class="name__input" type="text" required>
                 </label>
-                
+                <label class="author">
+                    Author
+                    <input class="author__input" type="text" required>
+                </label>
+                <label class="image">
+                    Image URL
+                    <input class="image__url" type="text" required>
+                </label>
+                <label class="price">
+                    Price
+                    <input class="price__input" type="text" required>
+                </label>
+                <label class="in-stock">
+                    In Stock
+                    <select class="in-stock__dropdown">
+                        <option value="default">-- Select One --</option>
+                        <option value="in-stock">In Stock</option>
+                        <option value="not-in-stock">Not In Stock</option>
+                    </select>
+                </label>
+                <button class="submit-button" type="submit">Submit</button>
             </form>
+            <button class="reset-button" type="button">Reset</button>
         </div>
     </div>
 

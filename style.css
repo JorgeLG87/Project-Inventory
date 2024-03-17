@@ -23,6 +23,7 @@
     grid-template-columns: 50% 50%;
     width: 100%;
     height: 100%;
+    background-color: rgb(224, 230, 234);
 }
 
 h3 {
@@ -30,12 +31,131 @@ h3 {
     font-family: "Average";
 }
 
-hr {
+.title-underline {
     width:75%;
 }
 
-.main__list__item {
-    width: 100%;
-    display: fle
+.name {
+    display: flex;;
+    margin-left: 12.5%;
+    margin-top: 20px;
+    gap: 20px;
+
 }
 
+.name__input {
+    width: 175px;;
+}
+
+.author {
+    display: flex;
+    margin-top: -21.5px;
+    margin-left: 53%;
+    gap: 20px;
+}
+
+
+.author__input {
+    width: 175px;
+}
+
+
+.image {
+    display: flex;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 12.5%;
+    gap: 20px;
+}
+
+.image__url {
+    width: 76%;
+}
+
+.price {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 12.5%;
+    gap: 20px;
+}
+
+.price__input {
+    width: 175px;
+}
+
+.in-stock {
+    display:flex;
+    margin-top: -21.5px;
+    margin-left: 53%;
+    gap: 20px;
+}
+
+.in-stock__dropdown {
+    width: 175px;
+    height: 20px;
+}
+
+.submit-button {
+    display: flex;
+    margin-left: 30%;
+    margin-top: 50px;
+    width: 120px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 7.5px;
+}
+
+.submit-button:hover {
+    opacity: 0.7;
+}
+
+.reset-button {
+    display: flex;
+    margin-top: -24px;
+    margin-left: 53%;
+    width: 120px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    border-radius: 7.5px; 
+}
+
+.main__list__item {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-top: 20px;
+    
+}
+
+.main__list__sub-item {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 50px;
+}
+
+.image-container__image {
+    width: 100%;
+    height: 180px;
+    border: 1px solid cadetblue;
+}
+
+.sublist-title {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Average";
+}
+
+.sublist-underline {
+    width: 86%;
+    margin-left: 0px;
+    margin-top: 5px;;
+}
