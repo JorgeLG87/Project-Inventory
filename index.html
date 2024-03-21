@@ -14,55 +14,69 @@
 <body>
     <!-- ----------------------------- -->
     <div class="top">
-        <header class="top__item">Inventory</header>
+        <img class="logo" src="./images/take-off.gif">
+        <header class="top__item">Go - Flights</header>
     </div>
 
     <div class="main">
         <div class="main__list">
-            <h3>List</h3>
+            <h3>Available Flights</h3>
             <hr class="title-underline">
-            <div class="main__list__item">
-                <div class="main__list__sub-item">
-                    <div class="image-container">
-                        <img class="image-container__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png">
-                    </div>
-                    <div class="info-container">
-                        <h2 class="sublist-title">Boca Juniors</h2>
-                        <hr class="sublist-underline">
-                    </div>
-                </div>
-            </div>
 
             <div class="main__list__item">
                 <div class="main__list__sub-item">
                     <div class="image-container">
-                        <img class="image-container__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png">
+                        <img class="image-container__image" src="https://www.bcdtravel.com/move-global/wp-content/uploads/sites/142/Move_Global_Spotlight_UnitedAirlines_logo_April2018.png">
                     </div>
                     <div class="info-container">
-                        <h2 class="sublist-title">Boca Juniors</h2>
+                        <div class="departures">
+                            <div class="icon-container">
+                                <img class="icon" src="./images/departures.png">
+                            </div>
+                            <div class="sublist-title-container">
+                                <h2 class="sublist-title">United States</h2>
+                            </div>
+                        </div>
                         <hr class="sublist-underline">
+                        <div class="departures">
+                            <div class="icon-container">
+                                <img class="icon2" src="./images/arrivals.png">
+                            </div>
+                            <div class="sublist-title-container">
+                                <h3 class="sublist-author">Switzerland</h3>
+                            </div>
+                        </div>
+                        <p>$28.00</p>
+                        <p class="in-stock1">In Stock</p>
+                        <p class="availableTick"></p>
+                        <button class="remove-button" type="click">Quantity Sold</button>
                     </div>
                 </div>
             </div>
 
 
         </div>
-
+<!------------------------------------------------------------------------------------------------------------------------->
         <div class="main__add-item">
-            <h3>Add Item</h3>
+            <h3>Add Flight</h3>
             <hr class="title-underline">
             <form>
                 <label class="name">
-                    Name
-                    <input class="name__input" type="text" required>
+                    From:
+                    <input class="name__input" type="text" name="test" required>
                 </label>
                 <label class="author">
-                    Author
+                    To:
                     <input class="author__input" type="text" required>
                 </label>
                 <label class="image">
-                    Image URL
-                    <input class="image__url" type="text" required>
+                    Airline: 
+                    <select class="in-stock__dropdown">
+                        <option value="default">-- Select One --</option>
+                        <option value="american-airlines">American Airlines</option>
+                        <option value="united-airlines">United Airlines</option>
+                        <option value="delta">Delta</option>
+                    </select>
                 </label>
                 <label class="price">
                     Price
@@ -70,15 +84,20 @@
                 </label>
                 <label class="in-stock">
                     In Stock
-                    <select class="in-stock__dropdown">
-                        <option value="default">-- Select One --</option>
-                        <option value="in-stock">In Stock</option>
-                        <option value="not-in-stock">Not In Stock</option>
-                    </select>
+                    <input class="quantity-available" type="text">
                 </label>
                 <button class="submit-button" type="submit">Submit</button>
             </form>
             <button class="reset-button" type="button">Reset</button>
+        </div>
+        <div class="sold-box">
+            <form class="sold-form">
+                <label class="sold">
+                    Quantity:
+                    <input class="quantity-sold" type="text">
+                </label>
+                <button class="sold-btn" type="button">Ok</button>
+            </form>
         </div>
     </div>
 
