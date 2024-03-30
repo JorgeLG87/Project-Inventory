@@ -267,7 +267,13 @@ h3 {
     height: 200px;
     top: 45%;
     left: 37%;
+    gap: 10px;
 
+}
+
+.sold-button {
+    width: 50px;
+    margin-top: 20px;
 }
 
 .sold-form {

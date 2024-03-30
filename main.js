@@ -96,13 +96,16 @@ form.addEventListener("submit", event => {
     const price2 = document.createElement("p");
     price2.innerText=`$${price}`;
 
-    const availableTick = document.querySelector(".availableTick");
-    itemObj[listItems] = availableTick;
+    const availableTick = document.createElement("p");
+    availableTick.setAttribute("class", "availableTick");
+
+    // availableTick = document.querySelector(".availableTick");
     
     
     availableTick.innerText = `Available: ${quantityStock2}`;
     availableTick.setAttribute("id",`${listItems}`);
     
+    itemObj[listItems] = availableTick;
 
     if (name !== "" && author !== "" && price !== "" && quantityStock !== "") {
         mainList.append(mainListItem);
@@ -163,6 +166,26 @@ form.addEventListener("submit", event => {
         removeBtn.setAttribute("class", "remove-button");
         removeBtn.setAttribute("type", "button");
         removeBtn.innerText = "Quantity Sold";
+        removeBtn.addEventListener("click", e => {
+            // console.log(e.target.parentNode);
+            let currFlight = e.target.parentNode;
+            let currFlightTick = e.target.parentNode.querySelector(".availableTick");
+            const messageBox = document.querySelector(".sold-box");
+        messageBox.style.display = "flex";
+
+        const soldBtn = document.querySelector(".sold-btn");
+        soldBtn.addEventListener("click", event => {
+            console.log("A: " + currFlightTick.innerText)
+            console.log("B: " + event.target.parentNode.querySelector("input").value)
+            currFlightTick.innerText = "Available: " + ((Number(currFlightTick.innerText.slice(11)) - Number(event.target.parentNode.querySelector("input").value)) > -1 ? (Number(currFlightTick.innerText.slice(11)) - Number(event.target.parentNode.querySelector("input").value)) : 0);
+            
+            if (currFlightTick.innerText === "Available: 0") {
+                currFlight.querySelector(".in-stock1").innerText = "Out of Stock"
+            }
+            event.target.parentNode.querySelector("input").value = 0;
+            messageBox.style.display = "none";
+        })
+        })
 
         infoContainer.append(removeBtn);
 
@@ -170,6 +193,9 @@ form.addEventListener("submit", event => {
         removeCompleteBtn.setAttribute("class", "completely-remove");
         removeCompleteBtn.setAttribute("type", "button");
         removeCompleteBtn.innerText = "Remove";
+        removeCompleteBtn.addEventListener("click", e => {
+            e.target.parentNode.parentNode.remove();
+        })
 
         infoContainer.append(removeCompleteBtn);
     }
@@ -191,27 +217,27 @@ btn.addEventListener("click", event => {
 const listOfFlights = document.querySelectorAll(".main__list");
 console.log(listOfFlights);
 
-for (let i = 0; i < listOfFlights.length; i++) {
-    const removeBtn = document.querySelector(".remove-button");
-    //const available = localStorage.getItem(JSON.parse(i));
-    //console.log(available);
+// for (let i = 0; i < listOfFlights.length; i++) {
+//     const removeBtn = document.querySelector(".remove-button");
+//     //const available = localStorage.getItem(JSON.parse(i));
+//     //console.log(available);
 
 
 
-    removeBtn.addEventListener("click", event => {
-        const messageBox = document.querySelector(".sold-box");
-        messageBox.style.display = "flex";
+//     removeBtn.addEventListener("click", event => {
+//         const messageBox = document.querySelector(".sold-box");
+//         messageBox.style.display = "flex";
 
-        const soldBtn = document.querySelector(".sold-btn");
-        soldBtn.addEventListener("click", event => {
-            messageBox.style.display = "none";
-        })
-    })
+//         const soldBtn = document.querySelector(".sold-btn");
+//         soldBtn.addEventListener("click", event => {
+//             messageBox.style.display = "none";
+//         })
+//     })
 
-    const removeCompleteBtn = document.querySelector(".completely-remove");
-    removeCompleteBtn.addEventListener("click", event => {
-        event.target.parentNode.parentNode.remove();
-    })
-}
+//     const removeCompleteBtn = document.querySelector(".completely-remove");
+//     removeCompleteBtn.addEventListener("click", event => {
+//         event.target.parentNode.parentNode.remove();
+//     })
+// }
 
 
