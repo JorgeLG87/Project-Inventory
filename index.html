@@ -49,7 +49,8 @@
                         <p>$28.00</p>
                         <p class="in-stock1">In Stock</p>
                         <p class="availableTick"></p>
-                        <button class="remove-button" type="click">Quantity Sold</button>
+                        <button class="remove-button" type="button">Quantity Sold</button>
+                        <button class="completely-remove" type="button">Remove</button>
                     </div>
                 </div>
             </div>
@@ -63,11 +64,11 @@
             <form>
                 <label class="name">
                     From:
-                    <input class="name__input" type="text" name="test" required>
+                    <input class="name__input" type="text" name="test">
                 </label>
                 <label class="author">
                     To:
-                    <input class="author__input" type="text" required>
+                    <input class="author__input" type="text">
                 </label>
                 <label class="image">
                     Airline: 
@@ -80,7 +81,7 @@
                 </label>
                 <label class="price">
                     Price
-                    <input class="price__input" type="text" required>
+                    <input class="price__input" type="text">
                 </label>
                 <label class="in-stock">
                     In Stock
@@ -100,6 +101,10 @@
             </form>
         </div>
     </div>
-
+    <div class="message-box">
+        <img class="x-icon" src="./images/cancel.png">
+        <p class="message-text">There is nothing to add!!</p>
+        <button class="btn" type="button">Ok</button>
+    </div>
 </body>
 </html>

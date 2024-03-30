@@ -17,6 +17,10 @@ p {
     background-color: cadetblue;
     position: relative;
     opacity: 0.81;
+    border: 3px solid gray;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0,0 , 0.5);
+    border-radius: 5px;
+    
 }
 
 .top__item {
@@ -207,6 +211,9 @@ h3 {
     display: flex;
     position: absolute;
     font-size: smaller;
+    margin-left: 10%;
+    margin-top: 16px;
+    font-weight: bold;
 }
 
 .in-stock1 {
@@ -223,12 +230,12 @@ h3 {
     
 }
 
-.remove-button {
+.remove-button, .completely-remove {
     background-color: red;
     opacity: 0.7;
     cursor: pointer;
     border-radius: 7.5px;
-    margin-left: 20%;
+    margin-left: 8%;
 }
 
 .icon {
@@ -278,4 +285,46 @@ h3 {
         display: grid;
         grid-column: 100%;
     }
+}
+
+.message-box {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    background: rgb(229, 136, 136);
+    border: 1px solid gray;
+    
+    border-style: outset;
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+
+
+}
+
+.x-icon {
+    
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: 90px;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(229, 136, 136, 0.2);
+}
+
+.message-text {
+    position: absolute;
+    margin-top: 32%;
+    margin-left: 55px;
+    font-size: larger;
+    color: white;
+}
+
+.btn {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 105px;
+    width: 80px;
+    cursor: pointer;
 }
