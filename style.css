@@ -17,8 +17,8 @@ p {
     background-color: cadetblue;
     position: relative;
     opacity: 0.81;
-    border: 3px solid gray;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0,0 , 0.5);
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0 , 0.5);
     border-radius: 5px;
     
 }
@@ -298,9 +298,9 @@ h3 {
     position: absolute;
     top: 30%;
     left: 41%;
-    background: rgb(229, 136, 136);
+    background: cadetblue;
     border: 1px solid gray;
-    
+    opacity: 0.8;
     border-style: outset;
     border-radius: 5px;
     width: 300px;
